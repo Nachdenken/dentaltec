@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DENTALTEC — Odontotecnico Artigianale e Digitale</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">  
 <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&family=Sora:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -11,13 +12,19 @@
 <!-- NAV -->
 <nav>
   <a href="#" class="nav-logo">DENTAL<span>TEC</span></a>
+  <div class="lang-switcher">
+    <button type="button" class="lang-btn active" data-lang="it">IT</button>
+    <button type="button" class="lang-btn" data-lang="es">ES</button>
+    <button type="button" class="lang-btn" data-lang="en">EN</button>
+    <button type="button" class="lang-btn" data-lang="de">DE</button>
+  </div>
   <ul class="nav-links">
-    <li><a href="#servizi">Servizi</a></li>
-    <li><a href="#chi-siamo">Chi Sono</a></li>
-    <li><a href="#processo">Come Funziona</a></li>
-    <li><a href="#testimonianze">Testimonianze</a></li>
+    <li><a href="#servizi" data-i18n="nav.servizi">Servizi</a></li>
+    <li><a href="#chi-siamo" data-i18n="nav.chiSono">Chi Sono</a></li>
+    <li><a href="#processo" data-i18n="nav.processo">Come Funziona</a></li>
+    <li><a href="#testimonianze" data-i18n="nav.testimonianze">Testimonianze</a></li>
   </ul>
-  <a href="#contatti" class="nav-cta">Prenota Consulenza</a>
+  <a href="#contatti" class="nav-cta" data-i18n="nav.prenota">Prenota Consulenza</a>
   <div class="hamburger">
     <span></span><span></span><span></span>
   </div>
@@ -27,19 +34,19 @@
 <section class="hero" style="padding:0">
   <div class="hero-grid-bg"></div>
   <div class="hero-left">
-    <div class="hero-badge">Odontotecnico Certificato</div>
-    <h1>
+    <div class="hero-badge" data-i18n="hero.badge">Odontotecnico Certificato</div>
+    <h1 data-i18n="hero.title">
       Protesi dentali<br>su misura,<br><em>direttamente da te</em>
     </h1>
-    <p class="hero-desc">
+    <p class="hero-desc" data-i18n="hero.desc">
       Qualità artigianale di laboratorio portata al tuo studio o a domicilio. Flessibilità, precisione e un servizio personalizzato che il mercato tradizionale non offre.
     </p>
     <div class="hero-actions">
-      <a href="#contatti" class="btn-primary">
+      <a href="#contatti" class="btn-primary" data-i18n="hero.ctaPrimary">
         Richiedi Consulenza
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
       </a>
-      <a href="#servizi" class="btn-outline">Scopri i servizi</a>
+      <a href="#servizi" class="btn-outline" data-i18n="hero.ctaSecondary">Scopri i servizi</a>
     </div>
   </div>
   <div class="hero-right">
@@ -49,8 +56,8 @@
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 2L8.5 6H13L9.5 8.5L11 12L7 9.5L3 12L4.5 8.5L1 6H5.5L7 2Z" stroke="white" stroke-width="1.2"/></svg>
         </div>
         <div>
-          <div style="font-size:10px;color:#6B85B0;font-weight:600">Qualità</div>
-          <div>Materiali CE</div>
+          <div style="font-size:10px;color:#6B85B0;font-weight:600" data-i18n="hero.float1Title">Qualità</div>
+          <div data-i18n="hero.float1Subtitle">Materiali CE</div>
         </div>
       </div>
       <div class="hero-card">
@@ -101,8 +108,8 @@
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="5.5" stroke="white" stroke-width="1.2"/><path d="M7 4v3l2 2" stroke="white" stroke-width="1.2" stroke-linecap="round"/></svg>
         </div>
         <div>
-          <div style="font-size:10px;color:#6B85B0;font-weight:600">Consegna</div>
-          <div>Entro 48h</div>
+          <div style="font-size:10px;color:#6B85B0;font-weight:600" data-i18n="hero.float2Title">Consegna</div>
+          <div data-i18n="hero.float2Subtitle">Entro 48h</div>
         </div>
       </div>
     </div>
@@ -113,19 +120,19 @@
 <div class="stats-strip">
   <div class="stat-item reveal">
     <div class="stat-number">15+</div>
-    <div class="stat-label">Anni di esperienza</div>
+    <div class="stat-label" data-i18n="stats.exp">Anni di esperienza</div>
   </div>
   <div class="stat-item reveal">
     <div class="stat-number">800+</div>
-    <div class="stat-label">Protesi realizzate</div>
+    <div class="stat-label" data-i18n="stats.protesi">Protesi realizzate</div>
   </div>
   <div class="stat-item reveal">
     <div class="stat-number">100%</div>
-    <div class="stat-label">Materiali certificati</div>
+    <div class="stat-label" data-i18n="stats.materiali">Materiali certificati</div>
   </div>
   <div class="stat-item reveal">
     <div class="stat-number">48h</div>
-    <div class="stat-label">Tempi di risposta</div>
+    <div class="stat-label" data-i18n="stats.tempo">Tempi di risposta</div>
   </div>
 </div>
 
@@ -172,12 +179,12 @@
       </div>
     </div>
     <div class="about-content reveal">
-      <div class="section-badge">Chi Sono</div>
-      <h2>Un professionista <em>vicino a te</em>, non solo un laboratorio</h2>
-      <p style="font-size:15px;color:var(--text-mid);line-height:1.8;margin-bottom:14px;">
+      <div class="section-badge" data-i18n="about.badge">Chi Sono</div>
+      <h2 data-i18n="about.title">Un professionista <em>vicino a te</em>, non solo un laboratorio</h2>
+      <p style="font-size:15px;color:var(--text-mid);line-height:1.8;margin-bottom:14px;" data-i18n="about.p1">
         Sono un odontotecnico con oltre 15 anni di esperienza nel settore. Ho scelto di offrire un servizio diverso: portare la qualità del laboratorio direttamente al tuo studio odontoiatrico o, quando necessario, al domicilio del paziente.
       </p>
-      <p style="font-size:15px;color:var(--text-mid);line-height:1.8;">
+      <p style="font-size:15px;color:var(--text-mid);line-height:1.8;" data-i18n="about.p2">
         Lavoro con materiali certificati CE, strumentazione di precisione e un approccio su misura per ogni caso clinico. La flessibilità è il mio punto di forza.
       </p>
       <ul class="about-quality-list">
@@ -185,25 +192,25 @@
           <div class="check-icon">
             <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
           </div>
-          Iscritto all'Albo degli Odontotecnici — N. 12345/IT
+          <span data-i18n="about.quality1">Iscritto all'Albo degli Odontotecnici — N. 12345/IT</span>
         </li>
         <li>
           <div class="check-icon">
             <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
           </div>
-          Materiali 100% certificati CE e biocompatibili
+          <span data-i18n="about.quality2">Materiali 100% certificati CE e biocompatibili</span>
         </li>
         <li>
           <div class="check-icon">
             <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
           </div>
-          Disponibilità flessibile: mattina, pomeriggio, sabato
+          <span data-i18n="about.quality3">Disponibilità flessibile: mattina, pomeriggio, sabato</span>
         </li>
         <li>
           <div class="check-icon">
             <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
           </div>
-          Servizio domiciliare per pazienti con difficoltà di mobilità
+          <span data-i18n="about.quality4">Servizio domiciliare per pazienti con difficoltà di mobilità</span>
         </li>
       </ul>
     </div>
@@ -214,10 +221,10 @@
 <section id="servizi">
   <div class="services-header">
     <div>
-      <div class="section-badge">Cosa Offro</div>
-      <h2>Servizi <em>specializzati</em></h2>
+      <div class="section-badge" data-i18n="services.badge">Cosa Offro</div>
+      <h2 data-i18n="services.title">Servizi <em>specializzati</em></h2>
     </div>
-    <a href="#contatti" class="btn-primary" style="font-size:12px;padding:12px 24px;">Richiedi un preventivo</a>
+    <a href="#contatti" class="btn-primary" style="font-size:12px;padding:12px 24px;" data-i18n="services.cta">Richiedi un preventivo</a>
   </div>
   <div class="services-grid">
     <div class="service-card reveal">
@@ -228,9 +235,9 @@
         </svg>
       </div>
       <span class="service-number">01</span>
-      <div class="service-title">Protesi Fissa</div>
-      <p class="service-desc">Corone, ponti e faccette in ceramica, zirconio o metallo-ceramica. Realizzazione artigianale con precisione millimetrica e colori personalizzati.</p>
-      <span class="service-badge">Alta Estetica</span>
+      <div class="service-title" data-i18n="services.card1.title">Protesi Fissa</div>
+      <p class="service-desc" data-i18n="services.card1.desc">Corone, ponti e faccette in ceramica, zirconio o metallo-ceramica. Realizzazione artigianale con precisione millimetrica e colori personalizzati.</p>
+      <span class="service-badge" data-i18n="services.card1.badge">Alta Estetica</span>
     </div>
     <div class="service-card reveal">
       <div class="service-icon-wrap">
@@ -242,9 +249,9 @@
         </svg>
       </div>
       <span class="service-number">02</span>
-      <div class="service-title">Protesi Mobile</div>
-      <p class="service-desc">Protesi totali e parziali mobili, scheletrati in metallo o resina acrilica. Riparazioni e rilievi funzionali anche a domicilio del paziente.</p>
-      <span class="service-badge">Servizio Domiciliare</span>
+      <div class="service-title" data-i18n="services.card2.title">Protesi Mobile</div>
+      <p class="service-desc" data-i18n="services.card2.desc">Protesi totali e parziali mobili, scheletrati in metallo o resina acrilica. Riparazioni e rilievi funzionali anche a domicilio del paziente.</p>
+      <span class="service-badge" data-i18n="services.card2.badge">Servizio Domiciliare</span>
     </div>
     <div class="service-card reveal">
       <div class="service-icon-wrap">
@@ -253,9 +260,9 @@
         </svg>
       </div>
       <span class="service-number">03</span>
-      <div class="service-title">Implantoprotesi</div>
-      <p class="service-desc">Sovrastrutture su impianti: corone singole, protesi avvitate e cementate. Compatibile con tutti i sistemi implantari presenti sul mercato.</p>
-      <span class="service-badge">Alta Tecnologia</span>
+      <div class="service-title" data-i18n="services.card3.title">Implantoprotesi</div>
+      <p class="service-desc" data-i18n="services.card3.desc">Sovrastrutture su impianti: corone singole, protesi avvitate e cementate. Compatibile con tutti i sistemi implantari presenti sul mercato.</p>
+      <span class="service-badge" data-i18n="services.card3.badge">Alta Tecnologia</span>
     </div>
     <div class="service-card reveal">
       <div class="service-icon-wrap">
@@ -265,9 +272,9 @@
         </svg>
       </div>
       <span class="service-number">04</span>
-      <div class="service-title">Apparecchi Ortodontici</div>
-      <p class="service-desc">Placche ortodontiche rimovibili, retainer e dispositivi funzionali per bambini e adulti. Realizzazione in resine biocompatibili certificate.</p>
-      <span class="service-badge">Pediatrico &amp; Adulti</span>
+      <div class="service-title" data-i18n="services.card4.title">Apparecchi Ortodontici</div>
+      <p class="service-desc" data-i18n="services.card4.desc">Placche ortodontiche rimovibili, retainer e dispositivi funzionali per bambini e adulti. Realizzazione in resine biocompatibili certificate.</p>
+      <span class="service-badge" data-i18n="services.card4.badge">Pediatrico &amp; Adulti</span>
     </div>
     <div class="service-card reveal">
       <div class="service-icon-wrap">
@@ -277,9 +284,9 @@
         </svg>
       </div>
       <span class="service-number">05</span>
-      <div class="service-title">Bite e Dispositivi</div>
-      <p class="service-desc">Bite notturni per bruxismo, mascherine sportive personalizzate e dispositivi per apnea notturna. Consegna entro 48 ore.</p>
-      <span class="service-badge">Consegna Rapida</span>
+      <div class="service-title" data-i18n="services.card5.title">Bite e Dispositivi</div>
+      <p class="service-desc" data-i18n="services.card5.desc">Bite notturni per bruxismo, mascherine sportive personalizzate e dispositivi per apnea notturna. Consegna entro 48 ore.</p>
+      <span class="service-badge" data-i18n="services.card5.badge">Consegna Rapida</span>
     </div>
     <div class="service-card reveal">
       <div class="service-icon-wrap">
@@ -290,18 +297,18 @@
         </svg>
       </div>
       <span class="service-number">06</span>
-      <div class="service-title">Consulenza &amp; Urgenze</div>
-      <p class="service-desc">Riparazioni urgenti di protesi, rilavorazioni e consulenze tecniche per casi complessi. Disponibilità anche nel fine settimana su prenotazione.</p>
-      <span class="service-badge">Disponibile H24</span>
+      <div class="service-title" data-i18n="services.card6.title">Consulenza &amp; Urgenze</div>
+      <p class="service-desc" data-i18n="services.card6.desc">Riparazioni urgenti di protesi, rilavorazioni e consulenze tecniche per casi complessi. Disponibilità anche nel fine settimana su prenotazione.</p>
+      <span class="service-badge" data-i18n="services.card6.badge">Disponibile H24</span>
     </div>
   </div>
 </section>
 
 <!-- WHY -->
 <section id="vantaggi">
-  <div class="section-badge">Perché Scegliermi</div>
-  <h2>La differenza che <em>fa la differenza</em></h2>
-  <p class="section-intro">In un mercato standardizzato, offro un approccio artigianale e personalizzato che i grandi laboratori non possono garantire.</p>
+  <div class="section-badge" data-i18n="why.badge">Perché Scegliermi</div>
+  <h2 data-i18n="why.title">La differenza che <em>fa la differenza</em></h2>
+  <p class="section-intro" data-i18n="why.intro">In un mercato standardizzato, offro un approccio artigianale e personalizzato che i grandi laboratori non possono garantire.</p>
   <div class="why-grid">
     <div class="why-item reveal">
       <div class="why-icon-wrap">
@@ -309,8 +316,8 @@
           <path d="M12 2L14.5 8.5L21 9.5L16.5 14L17.5 20.5L12 17.5L6.5 20.5L7.5 14L3 9.5L9.5 8.5L12 2Z" stroke="white" stroke-width="1.3"/>
         </svg>
       </div>
-      <div class="why-title">Qualità Certificata</div>
-      <p class="why-desc">Lavoro esclusivamente con materiali certificati CE. Ogni protesi è accompagnata da documentazione completa di conformità e tracciabilità.</p>
+      <div class="why-title" data-i18n="why.item1.title">Qualità Certificata</div>
+      <p class="why-desc" data-i18n="why.item1.desc">Lavoro esclusivamente con materiali certificati CE. Ogni protesi è accompagnata da documentazione completa di conformità e tracciabilità.</p>
     </div>
     <div class="why-item reveal">
       <div class="why-icon-wrap">
@@ -319,8 +326,8 @@
           <path d="M12 6v6l4 4" stroke="white" stroke-width="1.3" stroke-linecap="round"/>
         </svg>
       </div>
-      <div class="why-title">Tempi Certi</div>
-      <p class="why-desc">Rispetto dei tempi concordati è una priorità. Ricevi aggiornamenti sull'avanzamento del lavoro e notifiche anticipate in caso di variazioni.</p>
+      <div class="why-title" data-i18n="why.item2.title">Tempi Certi</div>
+      <p class="why-desc" data-i18n="why.item2.desc">Rispetto dei tempi concordati è una priorità. Ricevi aggiornamenti sull'avanzamento del lavoro e notifiche anticipate in caso di variazioni.</p>
     </div>
     <div class="why-item reveal">
       <div class="why-icon-wrap">
@@ -329,8 +336,8 @@
           <circle cx="12" cy="10" r="2.5" stroke="white" stroke-width="1.2"/>
         </svg>
       </div>
-      <div class="why-title">Servizio a Domicilio</div>
-      <p class="why-desc">Mi sposto al tuo studio o dal paziente. Elimina intermediari, riduci i costi logistici e offri un servizio premium ai tuoi pazienti.</p>
+      <div class="why-title" data-i18n="why.item3.title">Servizio a Domicilio</div>
+      <p class="why-desc" data-i18n="why.item3.desc">Mi sposto al tuo studio o dal paziente. Elimina intermediari, riduci i costi logistici e offri un servizio premium ai tuoi pazienti.</p>
     </div>
     <div class="why-item reveal">
       <div class="why-icon-wrap">
@@ -338,81 +345,81 @@
           <path d="M4 12h16M14 6l6 6-6 6" stroke="white" stroke-width="1.3" stroke-linecap="round"/>
         </svg>
       </div>
-      <div class="why-title">Flessibilità Totale</div>
-      <p class="why-desc">Lavoro con piccoli studi, cliniche indipendenti e privati. Mi adatto ai tuoi ritmi, non il contrario. Disponibile anche nei weekend.</p>
+      <div class="why-title" data-i18n="why.item4.title">Flessibilità Totale</div>
+      <p class="why-desc" data-i18n="why.item4.desc">Lavoro con piccoli studi, cliniche indipendenti e privati. Mi adatto ai tuoi ritmi, non il contrario. Disponibile anche nei weekend.</p>
     </div>
   </div>
 </section>
 
 <!-- PROCESS -->
 <section id="processo">
-  <div class="section-badge">Come Funziona</div>
-  <h2 style="color:var(--white)">Un processo <em>semplice</em> e trasparente</h2>
-  <p class="section-intro">Dal primo contatto alla consegna, ogni passaggio è chiaro e concordato con te in anticipo.</p>
+  <div class="section-badge" data-i18n="process.badge">Come Funziona</div>
+  <h2 style="color:var(--white)" data-i18n="process.title">Un processo <em>semplice</em> e trasparente</h2>
+  <p class="section-intro" data-i18n="process.intro">Dal primo contatto alla consegna, ogni passaggio è chiaro e concordato con te in anticipo.</p>
   <div class="process-steps">
     <div class="process-connector"></div>
     <div class="process-step reveal">
       <div class="step-dot"><span class="step-num">01</span></div>
-      <div class="step-title">Contatto</div>
-      <p class="step-desc">Mi contatti via telefono, email o WhatsApp. Descrivi il caso e concordiamo un primo appuntamento.</p>
+      <div class="step-title" data-i18n="process.step1.title">Contatto</div>
+      <p class="step-desc" data-i18n="process.step1.desc">Mi contatti via telefono, email o WhatsApp. Descrivi il caso e concordiamo un primo appuntamento.</p>
     </div>
     <div class="process-step reveal">
       <div class="step-dot"><span class="step-num">02</span></div>
-      <div class="step-title">Consultazione</div>
-      <p class="step-desc">Visito il tuo studio o il paziente. Raccolgo impronte, misure e documentazione fotografica del caso.</p>
+      <div class="step-title" data-i18n="process.step2.title">Consultazione</div>
+      <p class="step-desc" data-i18n="process.step2.desc">Visito il tuo studio o il paziente. Raccolgo impronte, misure e documentazione fotografica del caso.</p>
     </div>
     <div class="process-step reveal">
       <div class="step-dot"><span class="step-num">03</span></div>
-      <div class="step-title">Realizzazione</div>
-      <p class="step-desc">Realizzo la protesi con materiali certificati. Ti aggiorno sull'avanzamento e gestisco eventuali modifiche.</p>
+      <div class="step-title" data-i18n="process.step3.title">Realizzazione</div>
+      <p class="step-desc" data-i18n="process.step3.desc">Realizzo la protesi con materiali certificati. Ti aggiorno sull'avanzamento e gestisco eventuali modifiche.</p>
     </div>
     <div class="process-step reveal">
       <div class="step-dot"><span class="step-num">04</span></div>
-      <div class="step-title">Consegna</div>
-      <p class="step-desc">Consegno personalmente il lavoro con tutta la documentazione. Sono disponibile per aggiustamenti post-consegna.</p>
+      <div class="step-title" data-i18n="process.step4.title">Consegna</div>
+      <p class="step-desc" data-i18n="process.step4.desc">Consegno personalmente il lavoro con tutta la documentazione. Sono disponibile per aggiustamenti post-consegna.</p>
     </div>
   </div>
 </section>
 
 <!-- TESTIMONIALS -->
 <section id="testimonianze">
-  <div class="section-badge">Testimonianze</div>
-  <h2>Cosa dicono <em>i professionisti</em> che lavorano con me</h2>
-  <p class="section-intro">La fiducia dei dentisti e dei pazienti è la mia miglior ricompensa.</p>
+  <div class="section-badge" data-i18n="testimonials.badge">Testimonianze</div>
+  <h2 data-i18n="testimonials.title">Cosa dicono <em>i professionisti</em> che lavorano con me</h2>
+  <p class="section-intro" data-i18n="testimonials.intro">La fiducia dei dentisti e dei pazienti è la mia miglior ricompensa.</p>
   <div class="testimonials-grid">
     <div class="testimonial-card reveal">
       <div class="quote-mark">"</div>
-      <p class="testimonial-text">Lavoro con lui da tre anni. La qualità delle sue protesi ceramiche è notevole, e la puntualità nelle consegne mi ha permesso di ottimizzare i miei appuntamenti senza sorprese.</p>
+      <p class="testimonial-text" data-i18n="testimonials.card1.text">Lavoro con lui da tre anni. La qualità delle sue protesi ceramiche è notevole, e la puntualità nelle consegne mi ha permesso di ottimizzare i miei appuntamenti senza sorprese.</p>
       <div class="testimonial-author">
         <div class="author-avatar">MR</div>
         <div>
           <div class="stars">★★★★★</div>
-          <div class="author-name">Dr. Marco Rossi</div>
-          <div class="author-role">Odontoiatra, Milano</div>
+          <div class="author-name" data-i18n="testimonials.card1.name">Dr. Marco Rossi</div>
+          <div class="author-role" data-i18n="testimonials.card1.role">Odontoiatra, Milano</div>
         </div>
       </div>
     </div>
     <div class="testimonial-card reveal">
       <div class="quote-mark">"</div>
-      <p class="testimonial-text">Servizio completamente diverso dai laboratori tradizionali. Viene lui da noi, capisce le esigenze estetiche dei pazienti, e il risultato finale è sempre eccellente. Altamente raccomandato.</p>
+      <p class="testimonial-text" data-i18n="testimonials.card2.text">Servizio completamente diverso dai laboratori tradizionali. Viene lui da noi, capisce le esigenze estetiche dei pazienti, e il risultato finale è sempre eccellente. Altamente raccomandato.</p>
       <div class="testimonial-author">
         <div class="author-avatar">AB</div>
         <div>
           <div class="stars">★★★★★</div>
-          <div class="author-name">Dr.ssa Anna Bianchi</div>
-          <div class="author-role">Studio Dentistico, Roma</div>
+          <div class="author-name" data-i18n="testimonials.card2.name">Dr.ssa Anna Bianchi</div>
+          <div class="author-role" data-i18n="testimonials.card2.role">Studio Dentistico, Roma</div>
         </div>
       </div>
     </div>
     <div class="testimonial-card reveal">
       <div class="quote-mark">"</div>
-      <p class="testimonial-text">Avevo urgenza di riparare una protesi rotta prima di partire. È venuto a casa mia in meno di 24 ore. Professionalità assoluta e persona di grande fiducia.</p>
+      <p class="testimonial-text" data-i18n="testimonials.card3.text">Avevo urgenza di riparare una protesi rotta prima di partire. È venuto a casa mia in meno di 24 ore. Professionalità assoluta e persona di grande fiducia.</p>
       <div class="testimonial-author">
         <div class="author-avatar">GF</div>
         <div>
           <div class="stars">★★★★★</div>
-          <div class="author-name">Giuseppe Ferri</div>
-          <div class="author-role">Paziente, Torino</div>
+          <div class="author-name" data-i18n="testimonials.card3.name">Giuseppe Ferri</div>
+          <div class="author-role" data-i18n="testimonials.card3.role">Paziente, Torino</div>
         </div>
       </div>
     </div>
@@ -421,71 +428,71 @@
 
 <!-- CONTACT -->
 <section id="contatti">
-  <div class="section-badge">Contatti</div>
-  <h2>Iniziamo a <em>collaborare</em></h2>
+  <div class="section-badge" data-i18n="contact.badge">Contatti</div>
+  <h2 data-i18n="contact.title">Iniziamo a <em>collaborare</em></h2>
   <div class="contact-grid">
     <div class="contact-form-wrap reveal">
-      <h3 style="font-family:'Sora',sans-serif;font-size:20px;font-weight:700;color:var(--navy);margin-bottom:24px;">Richiedi una consulenza gratuita</h3>
+      <h3 style="font-family:'Sora',sans-serif;font-size:20px;font-weight:700;color:var(--navy);margin-bottom:24px;" data-i18n="contact.formTitle">Richiedi una consulenza gratuita</h3>
       <div class="form-row">
         <div class="form-group">
-          <label for="nome">Nome</label>
-          <input type="text" id="nome" placeholder="Mario Rossi">
+          <label for="nome" data-i18n="contact.nomeLabel">Nome</label>
+          <input type="text" id="nome" data-i18n-placeholder="contact.nomePlaceholder" placeholder="Mario Rossi">
         </div>
         <div class="form-group">
-          <label for="professione">Professione</label>
+          <label for="professione" data-i18n="contact.professioneLabel">Professione</label>
           <select id="professione">
-            <option value="">Seleziona...</option>
-            <option>Odontoiatra</option>
-            <option>Clinica Dentistica</option>
-            <option>Paziente Privato</option>
-            <option>Altro</option>
+            <option value="" data-i18n="contact.professioneOptionDefault">Seleziona...</option>
+            <option data-i18n="contact.professioneOption1">Odontoiatra</option>
+            <option data-i18n="contact.professioneOption2">Clinica Dentistica</option>
+            <option data-i18n="contact.professioneOption3">Paziente Privato</option>
+            <option data-i18n="contact.professioneOption4">Altro</option>
           </select>
         </div>
       </div>
       <div class="form-row">
         <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" placeholder="mario@studio.it">
+          <label for="email" data-i18n="contact.emailLabel">Email</label>
+          <input type="email" id="email" data-i18n-placeholder="contact.emailPlaceholder" placeholder="mario@studio.it">
         </div>
         <div class="form-group">
-          <label for="telefono">Telefono</label>
-          <input type="tel" id="telefono" placeholder="+39 333 123 4567">
+          <label for="telefono" data-i18n="contact.telefonoLabel">Telefono</label>
+          <input type="tel" id="telefono" data-i18n-placeholder="contact.telefonoPlaceholder" placeholder="+39 333 123 4567">
         </div>
       </div>
       <div class="form-group">
-        <label for="servizio">Servizio Richiesto</label>
+        <label for="servizio" data-i18n="contact.servizioLabel">Servizio Richiesto</label>
         <select id="servizio">
-          <option value="">Seleziona un servizio...</option>
-          <option>Protesi Fissa</option>
-          <option>Protesi Mobile</option>
-          <option>Implantoprotesi</option>
-          <option>Apparecchi Ortodontici</option>
-          <option>Bite / Dispositivi</option>
-          <option>Urgenza / Riparazione</option>
-          <option>Consulenza Generale</option>
+          <option value="" data-i18n="contact.servizioOptionDefault">Seleziona un servizio...</option>
+          <option data-i18n="contact.servizioOption1">Protesi Fissa</option>
+          <option data-i18n="contact.servizioOption2">Protesi Mobile</option>
+          <option data-i18n="contact.servizioOption3">Implantoprotesi</option>
+          <option data-i18n="contact.servizioOption4">Apparecchi Ortodontici</option>
+          <option data-i18n="contact.servizioOption5">Bite / Dispositivi</option>
+          <option data-i18n="contact.servizioOption6">Urgenza / Riparazione</option>
+          <option data-i18n="contact.servizioOption7">Consulenza Generale</option>
         </select>
       </div>
       <div class="form-group">
-        <label for="messaggio">Descrivi il caso</label>
-        <textarea id="messaggio" placeholder="Descrivi brevemente il caso clinico o la tua necessità..."></textarea>
+        <label for="messaggio" data-i18n="contact.messaggioLabel">Descrivi il caso</label>
+        <textarea id="messaggio" data-i18n-placeholder="contact.messaggioPlaceholder" placeholder="Descrivi brevemente il caso clinico o la tua necessità..."></textarea>
       </div>
-      <button class="submit-btn" onclick="inviaRichiesta()">
+      <button class="submit-btn" onclick="inviaRichiesta()" data-i18n="contact.submit">
         Invia Richiesta
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
       </button>
     </div>
     <div class="contact-info-side reveal">
-      <h3>Contattami direttamente</h3>
-      <p>Compila il modulo o raggiungimi direttamente. Rispondo entro 24 ore lavorative. Disponibile anche per urgenze.</p>
+      <h3 data-i18n="contact.infoTitle">Contattami direttamente</h3>
+      <p data-i18n="contact.infoDesc">Compila il modulo o raggiungimi direttamente. Rispondo entro 24 ore lavorative. Disponibile anche per urgenze.</p>
       <div class="info-cards">
         <div class="info-card">
           <div class="info-card-icon">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 4h3l2 4-2 2c1.2 2.4 3 4.2 5.5 5.5l2-2 4 2v3c0 1-1 2-2 2C8 20.5 1.5 14 1 7c0-1 1-2 2-3Z" stroke="#1E6DBF" stroke-width="1.3"/></svg>
           </div>
           <div>
-            <div class="info-label">Telefono &amp; WhatsApp</div>
-            <div class="info-value">+39 333 456 7890</div>
-            <div class="info-sub">Disponibile lun–sab, 8:00–19:00</div>
+            <div class="info-label" data-i18n="contact.infoCard1Label">Telefono &amp; WhatsApp</div>
+            <div class="info-value" data-i18n="contact.infoCard1Value">+39 333 456 7890</div>
+            <div class="info-sub" data-i18n="contact.infoCard1Sub">Disponibile lun–sab, 8:00–19:00</div>
           </div>
         </div>
         <div class="info-card">
@@ -493,9 +500,9 @@
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2" y="4" width="16" height="13" rx="2" stroke="#1E6DBF" stroke-width="1.3"/><path d="M2 8l8 5 8-5" stroke="#1E6DBF" stroke-width="1.2"/></svg>
           </div>
           <div>
-            <div class="info-label">Email</div>
-            <div class="info-value">info@odontart.it</div>
-            <div class="info-sub">Risposta garantita entro 24h</div>
+            <div class="info-label" data-i18n="contact.infoCard2Label">Email</div>
+            <div class="info-value" data-i18n="contact.infoCard2Value">info@odontart.it</div>
+            <div class="info-sub" data-i18n="contact.infoCard2Sub">Risposta garantita entro 24h</div>
           </div>
         </div>
         <div class="info-card">
@@ -503,9 +510,9 @@
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2C7 2 4 4.7 4 8C4 12.5 10 18 10 18C10 18 16 12.5 16 8C16 4.7 13 2 10 2Z" stroke="#1E6DBF" stroke-width="1.3"/><circle cx="10" cy="8" r="2" stroke="#1E6DBF" stroke-width="1.2"/></svg>
           </div>
           <div>
-            <div class="info-label">Zona di Intervento</div>
-            <div class="info-value">Roma e provincia</div>
-            <div class="info-sub">Su richiesta: tutto il Lazio e dintorni</div>
+            <div class="info-label" data-i18n="contact.infoCard3Label">Zona di Intervento</div>
+            <div class="info-value" data-i18n="contact.infoCard3Value">Roma e provincia</div>
+            <div class="info-sub" data-i18n="contact.infoCard3Sub">Su richiesta: tutto il Lazio e dintorni</div>
           </div>
         </div>
         <div class="info-card">
@@ -513,28 +520,28 @@
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#1E6DBF" stroke-width="1.3"/><path d="M10 5v5l3 3" stroke="#1E6DBF" stroke-width="1.3" stroke-linecap="round"/></svg>
           </div>
           <div>
-            <div class="info-label">Orari Flessibili</div>
-            <div class="info-value">Lun – Sab, 7:30 – 20:00</div>
-            <div class="info-sub">Urgenze: anche domenica su appuntamento</div>
+            <div class="info-label" data-i18n="contact.infoCard4Label">Orari Flessibili</div>
+            <div class="info-value" data-i18n="contact.infoCard4Value">Lun – Sab, 7:30 – 20:00</div>
+            <div class="info-sub" data-i18n="contact.infoCard4Sub">Urgenze: anche domenica su appuntamento</div>
           </div>
         </div>
       </div>
       <div class="trust-badges">
         <div class="trust-badge">
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1l1.5 4H13l-3.5 2.5L11 12 7 9.5 3 12l1.5-4.5L1 5h4.5L7 1Z" stroke="#1E6DBF" stroke-width="0.9"/></svg>
-          Albo ODT Certificato
+          <span data-i18n="contact.trust1">Albo ODT Certificato</span>
         </div>
         <div class="trust-badge">
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="1.5" y="1.5" width="11" height="11" rx="1.5" stroke="#1E6DBF" stroke-width="0.9"/><path d="M4 7l2 2 4-4" stroke="#1E6DBF" stroke-width="0.9" stroke-linecap="round"/></svg>
-          Materiali CE
+          <span data-i18n="contact.trust2">Materiali CE</span>
         </div>
         <div class="trust-badge">
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1C4 1 1 3.5 1 6.5C1 10 7 13.5 7 13.5S13 10 13 6.5C13 3.5 10 1 7 1Z" stroke="#1E6DBF" stroke-width="0.9"/><circle cx="7" cy="6.5" r="1.5" stroke="#1E6DBF" stroke-width="0.9"/></svg>
-          Servizio Domiciliare
+          <span data-i18n="contact.trust3">Servizio Domiciliare</span>
         </div>
         <div class="trust-badge">
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="#1E6DBF" stroke-width="0.9"/><path d="M7 4v3l2 2" stroke="#1E6DBF" stroke-width="0.9" stroke-linecap="round"/></svg>
-          Tempi Garantiti
+          <span data-i18n="contact.trust4">Tempi Garantiti</span>
         </div>
       </div>
     </div>
@@ -543,17 +550,18 @@
 
 <!-- FOOTER -->
 <footer>
-  <a href="#" class="footer-logo">Odont<span>Art</span></a>
+  <a href="#" class="footer-logo">Dental<span>Tec</span></a>
   <ul class="footer-links">
-    <li><a href="#servizi">Servizi</a></li>
-    <li><a href="#chi-siamo">Chi Sono</a></li>
-    <li><a href="#processo">Come Funziona</a></li>
-    <li><a href="#contatti">Contatti</a></li>
-    <li><a href="#">Privacy Policy</a></li>
+    <li><a href="#servizi" data-i18n="nav.servizi">Servizi</a></li>
+    <li><a href="#chi-siamo" data-i18n="nav.chiSono">Chi Sono</a></li>
+    <li><a href="#processo" data-i18n="nav.processo">Come Funziona</a></li>
+    <li><a href="#contatti" data-i18n="contact.badge">Contatti</a></li>
+    <li><a href="#" data-i18n="footer.privacy">Privacy Policy</a></li>
   </ul>
-  <div class="footer-copy">© 2025 OdontArt — P.IVA IT12345678901</div>
+  <div class="footer-copy" data-i18n="footer.copy">© 2025 DentalTec — P.IVA IT12345678901</div>
 </footer>
 
+<script src="translations.js"></script>
 <script type="module" src="/js/script.js"></script>
 </body>
 </html>
