@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&family=Sora:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 </head>
+<body>
 
 <!-- NAV -->
 <nav>
@@ -433,53 +434,56 @@
   <div class="contact-grid">
     <div class="contact-form-wrap reveal">
       <h3 style="font-family:'Sora',sans-serif;font-size:20px;font-weight:700;color:var(--navy);margin-bottom:24px;" data-i18n="contact.formTitle">Richiedi una consulenza gratuita</h3>
-      <div class="form-row">
-        <div class="form-group">
-          <label for="nome" data-i18n="contact.nomeLabel">Nome</label>
-          <input type="text" id="nome" data-i18n-placeholder="contact.nomePlaceholder" placeholder="Mario Rossi">
-        </div>
-        <div class="form-group">
-          <label for="professione" data-i18n="contact.professioneLabel">Professione</label>
-          <select id="professione">
-            <option value="" data-i18n="contact.professioneOptionDefault">Seleziona...</option>
-            <option data-i18n="contact.professioneOption1">Odontoiatra</option>
-            <option data-i18n="contact.professioneOption2">Clinica Dentistica</option>
-            <option data-i18n="contact.professioneOption3">Paziente Privato</option>
-            <option data-i18n="contact.professioneOption4">Altro</option>
-          </select>
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="form-group">
-          <label for="email" data-i18n="contact.emailLabel">Email</label>
-          <input type="email" id="email" data-i18n-placeholder="contact.emailPlaceholder" placeholder="mario@studio.it">
-        </div>
-        <div class="form-group">
-          <label for="telefono" data-i18n="contact.telefonoLabel">Telefono</label>
-          <input type="tel" id="telefono" data-i18n-placeholder="contact.telefonoPlaceholder" placeholder="+39 333 123 4567">
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="servizio" data-i18n="contact.servizioLabel">Servizio Richiesto</label>
-        <select id="servizio">
-          <option value="" data-i18n="contact.servizioOptionDefault">Seleziona un servizio...</option>
-          <option data-i18n="contact.servizioOption1">Protesi Fissa</option>
-          <option data-i18n="contact.servizioOption2">Protesi Mobile</option>
-          <option data-i18n="contact.servizioOption3">Implantoprotesi</option>
-          <option data-i18n="contact.servizioOption4">Apparecchi Ortodontici</option>
-          <option data-i18n="contact.servizioOption5">Bite / Dispositivi</option>
-          <option data-i18n="contact.servizioOption6">Urgenza / Riparazione</option>
-          <option data-i18n="contact.servizioOption7">Consulenza Generale</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="messaggio" data-i18n="contact.messaggioLabel">Descrivi il caso</label>
-        <textarea id="messaggio" data-i18n-placeholder="contact.messaggioPlaceholder" placeholder="Descrivi brevemente il caso clinico o la tua necessità..."></textarea>
-      </div>
-      <button class="submit-btn" onclick="inviaRichiesta()" data-i18n="contact.submit">
-        Invia Richiesta
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-      </button>
+      <form id="contactForm" class="contact-form">
+  <div class="form-row">
+    <div class="form-group">
+      <label for="nome" data-i18n="contact.nomeLabel">Nome</label>
+      <input type="text" id="nome" name="from_name" required placeholder="Mario Rossi" data-i18n-placeholder="contact.nomePlaceholder">
+    </div>
+    <div class="form-group">
+      <label for="professione" data-i18n="contact.professioneLabel">Professione</label>
+      <select id="professione" name="profession" data-i18n="contact.professioneOptionDefault">
+        <option value="" data-i18n="contact.professioneOptionDefault">Seleziona...</option>
+        <option value="Odontoiatra" data-i18n="contact.professioneOption1">Odontoiatra</option>
+        <option value="Clinica Dentistica" data-i18n="contact.professioneOption2">Clinica Dentistica</option>
+        <option value="Paziente Privato" data-i18n="contact.professioneOption3">Paziente Privato</option>
+        <option value="Altro" data-i18n="contact.professioneOption4">Altro</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group">
+      <label for="email" data-i18n="contact.emailLabel">Email</label>
+      <input type="email" id="email" name="from_email" required placeholder="mario@studio.it" data-i18n-placeholder="contact.emailPlaceholder">
+    </div>
+    <div class="form-group">
+      <label for="telefono" data-i18n="contact.telefonoLabel">Telefono</label>
+      <input type="tel" id="telefono" name="phone" placeholder="+39 333 123 4567" data-i18n-placeholder="contact.telefonoPlaceholder">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="servizio" data-i18n="contact.servizioLabel">Servizio Richiesto</label>
+    <select id="servizio" name="service" data-i18n="contact.servizioOptionDefault">
+      <option value="" data-i18n="contact.servizioOptionDefault">Seleziona un servizio...</option>
+      <option value="Protesi Fissa" data-i18n="contact.servizioOption1">Protesi Fissa</option>
+      <option value="Protesi Mobile" data-i18n="contact.servizioOption2">Protesi Mobile</option>
+      <option value="Implantoprotesi" data-i18n="contact.servizioOption3">Implantoprotesi</option>
+      <option value="Apparecchi Ortodontici" data-i18n="contact.servizioOption4">Apparecchi Ortodontici</option>
+      <option value="Bite / Dispositivi" data-i18n="contact.servizioOption5">Bite / Dispositivi</option>
+      <option value="Urgenza / Riparazione" data-i18n="contact.servizioOption6">Urgenza / Riparazione</option>
+      <option value="Consulenza Generale" data-i18n="contact.servizioOption7">Consulenza Generale</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="messaggio" data-i18n="contact.messaggioLabel">Descrivi il caso</label>
+    <textarea id="messaggio" name="message" rows="4" placeholder="Descrivi brevemente il caso clinico o la tua necessità..." data-i18n-placeholder="contact.messaggioPlaceholder"></textarea>
+  </div>
+
+  <button type="submit" class="submit-btn" data-i18n="contact.submit">Invia Richiesta</button>
+</form>
     </div>
     <div class="contact-info-side reveal">
       <h3 data-i18n="contact.infoTitle">Contattami direttamente</h3>
@@ -563,5 +567,7 @@
 
 <script src="translations.js"></script>
 <script src="js/script.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>emailjs.init("3xsG_zHPzUDR9xvh7");</script>
 </body>
 </html>

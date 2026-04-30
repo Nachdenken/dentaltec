@@ -65,17 +65,56 @@
     });
   });
 
-  function inviaRichiesta() {
-    const nome = document.getElementById('nome').value;
-    const email = document.getElementById('email').value;
-    if (!nome || !email) {
-      const message = getTranslationByKey('alert.missingFields');
-      alert(message || 'Per favore compila almeno nome ed email.');
-      return;
-    }
+  // === INICIALIZACIÓN EMAILJS ===
+  // ⚠️ REEMPLAZA "TU_PUBLIC_KEY" CON TU CLAVE REAL DE EMAILJS
+  emailjs.init("3xsG_zHPzUDR9xvh7");
 
-    const successTemplate = getTranslationByKey('alert.success') || 'Grazie {name}! La tua richiesta è stata inviata. Ti contatterò entro 24 ore.';
-    alert(successTemplate.replace('{name}', nome));
+  // === MANEJO DEL FORMULARIO CON EMAILJS ===
+  const contactForm = document.getElementById("contactForm");
+
+  if (contactForm) {
+    contactForm.addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const btn = this.querySelector(".submit-btn");
+      const originalText = btn.textContent;
+      btn.textContent = "Invio in corso...";
+      btn.disabled = true;
+
+      const formData = {
+        from_name: document.getElementById("nome").value.trim(),
+        from_email: document.getElementById("email").value.trim(),
+        phone: document.getElementById("telefono").value.trim(),
+        profession: document.getElementById("professione").value,
+        service: document.getElementById("servizio").value,
+        message: document.getElementById("messaggio").value.trim()
+      };
+
+      if (!formData.from_name || !formData.from_email) {
+        const msg = getTranslationByKey("alert.missingFields") || "Per favore compila almeno nome ed email.";
+        alert(msg);
+        btn.textContent = originalText;
+        btn.disabled = false;
+        return;
+      }
+
+      // ⚠️ REEMPLAZA CON TUS IDS REALES DE EMAILJS
+      emailjs.send("service_1ae3n2j", "template_ns8xb6n", formData)
+        .then(() => {
+          const successMsg = getTranslationByKey("alert.success")?.replace("{name}", formData.from_name)
+            || "Grazie! La tua richiesta è stata inviata.";
+          alert(successMsg);
+          this.reset();
+        })
+        .catch((err) => {
+          console.error("EmailJS Error:", err);
+          alert("Errore durante l'invio. Riprova o contattami via WhatsApp.");
+        })
+        .finally(() => {
+          btn.textContent = originalText;
+          btn.disabled = false;
+        });
+    });
   }
 
   // Scroll reveal
