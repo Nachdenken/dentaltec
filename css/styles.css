@@ -22,9 +22,14 @@
   --glow: 0 0 30px rgba(0,200,232,0.25);
 }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+  overflow-x: hidden;
+}
 
 body {
+  width: 100%;
   font-family: 'Nunito Sans', sans-serif;
   background: var(--white);
   color: var(--text-dark);
@@ -1165,14 +1170,16 @@ footer {
 @media (max-width: 600px) {
   /* Corrección del padding para dar más espacio al texto */
   .hero-left {
-    padding: 40px 5vw 60px; /* Reducimos el espacio lateral */
+    padding: 40px 4vw 60px; /* Reducimos el espacio lateral usando viewport width */
   }
 
   /* Corrección del tamaño del título para que no se corte */
-  h1 {
+  h1,
+  h2 {
     font-size: clamp(28px, 8vw, 40px); /* Hacemos el mínimo más pequeño (28px) */
     line-height: 1.1; /* Reducimos un poco el interlineado */
     word-break: break-word; /* Fuerza el salto de línea si una palabra es muy larga */
+    word-wrap: break-word;
   }
   
   /* Opcional: ajustar la descripción también */
@@ -1180,6 +1187,9 @@ footer {
     font-size: 14px;
   }
 
+  .float-badge.top-right {
+    right: 0;
+  }
 
   .lang-btn {
     font-size: 10px;
