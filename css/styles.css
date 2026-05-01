@@ -1163,9 +1163,23 @@ footer {
 }
 
 @media (max-width: 600px) {
-  .services-grid { grid-template-columns: 1fr; }
-  .why-grid { grid-template-columns: 1fr; }
-  .process-steps { grid-template-columns: 1fr; }
+  /* Corrección del padding para dar más espacio al texto */
+  .hero-left {
+    padding: 40px 5vw 60px; /* Reducimos el espacio lateral */
+  }
+
+  /* Corrección del tamaño del título para que no se corte */
+  h1 {
+    font-size: clamp(28px, 8vw, 40px); /* Hacemos el mínimo más pequeño (28px) */
+    line-height: 1.1; /* Reducimos un poco el interlineado */
+    word-break: break-word; /* Fuerza el salto de línea si una palabra es muy larga */
+  }
+  
+  /* Opcional: ajustar la descripción también */
+  .hero-desc {
+    font-size: 14px;
+  }
+
 
   .lang-btn {
     font-size: 10px;
